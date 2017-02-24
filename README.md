@@ -1,10 +1,5 @@
 #**Finding Lane Lines on the Road** 
 
-*Note to mentor:*
-
-*I cloned this repo from the original project repo (https://github.com/udacity/CarND-LaneLines-P1.git)
-in order to keep this self-sufficient, and modified P1.ipynb and README.mb (this file) for this project.*
-
 ### Goal
 
 The goal of this project is identify right and left lanes in still images (or videos)
