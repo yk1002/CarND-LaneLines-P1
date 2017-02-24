@@ -1,26 +1,25 @@
 #**Finding Lane Lines on the Road** 
 
-The goals of this project is identify lanes in a given still image (or video)
-and draw them onto the original image (or video).
+*Note to mentor:*
 
-*Note to mentor:
+*I cloned this repo from the original project repo (https://github.com/udacity/CarND-LaneLines-P1.git)
+and modified P1.ipynb and README.mb (this file) for this project.*
 
-I created this repo by cloning the original project repo (https://github.com/udacity/CarND-LaneLines-P1.git)
-and modified the following two files.
+### Goal
 
-1. P1.ipynb
-2. README.mb (this file)*
+The goal of this project is identify lanes in still images (or videos)
+and draw them as two straight lines on top of them.
 
 ---
 
-###Project description
+###Tasks
 
 I have implemented the "pipeline" as a function *detect_lane_lines* that
 produces an image of left and right lane line segments from a given still image.
 It performs the following operations in order.
 
-1. Convert a given still image into a grayscale image.
-2. Apply Gaussiann smoothing to the grayscale image.
+1. Convert a given still image into a gray-scale image.
+2. Apply Gaussian smoothing to the gray-scale image.
 3. Produce an image with edges only from the smoothed image.
 4. Mask out the region-of-interest from the edge only image.
 5. Apply Hough transform to detect lane line segments.
@@ -37,12 +36,12 @@ It performs the following operations in order.
 
 ###Potential shortcomings with the current pipeline
 
-1. Drawn lanes lines are wobly.
-2. Won't work well in curves, upslopes, and down slops.
+1. Drawn lanes lines are wobbly.
+2. Won't work well in curves, up-slopes, and down slops.
 3. Won't work if lanes are too weak, covered with something (dirt, snow, water), or even non-existent.
 4. Won't work well where lane lines are doubled.
 
 ###Possible improvements
 
 1. Apply smoothing over time.
-2. Maybe fit the line segments with quadratic regression to account for curvetures.
+2. Maybe fit the line segments with quadratic regression to account for curvatures.
